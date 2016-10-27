@@ -66,10 +66,10 @@ public ListElement deleteElement(int index)
 
 public void printLinkedListHead()
 {
-	
-	while(head!=null){
-		head.print();
-		head=head.getNext();
+	ListElement current=head;
+	while(current!=null){
+		current.print();
+		current=current.getNext();
 	}
 }
 public void printLinkedListTail()
@@ -84,10 +84,10 @@ public void printLinkedListTail()
 		prev = current;
 		current = next;
 	}
-	head = prev;
-	while(head!=null){
-		head.print();
-		head=head.getNext();
+	current = prev;
+	while(current!=null){
+		current.print();
+		current=current.getNext();
 	}  
 }
 
@@ -103,14 +103,14 @@ public static void main(String[] args) {
 	list.addElement(b);
 	list.addElement(c);
 	list.addElement(d);
-/*	System.out.println("Print list");
+	System.out.println("Print list");
 	list.printLinkedListHead();
 	System.out.println("get element in index 2");
 	list.getElement(2);
 	System.out.println("delete element in index 1");
 	list.deleteElement(1);
 	System.out.println("Print list");
-	list.printLinkedListHead();*/
+	list.printLinkedListHead();
 	System.out.println("Print list from tail");
 	list.printLinkedListTail();
 }
