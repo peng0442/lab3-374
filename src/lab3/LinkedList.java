@@ -35,7 +35,7 @@ public ListElement getElement(int index)
 	if(head!=null)
 	{
 		current = head.getNext();
-		for(int i = 0; i<index;i++)
+		for(int i = 1; i<index;i++)
 		{
 			if(current.getNext()==null)
 				return null;
@@ -52,16 +52,16 @@ public ListElement deleteElement(int index)
 	ListElement current = head;
 	if(current!=null)
 	{
-		for (int i =0;i<index;i++)
+		for (int i =1;i<index;i++)
 		{
 			if(current.getNext()==null)
 				return null;
-			current.setNext(current.getNext().getNext());
+			current=current.getNext();
 			
 		}
-
+		current.setNext(current.getNext().getNext());
 	}
-		return current;
+		return null;
 }
 
 public void printLinkedListHead()
@@ -71,6 +71,15 @@ public void printLinkedListHead()
 		head.print();
 		head=head.getNext();
 	}
+}
+public void printLinkedListTail()
+{
+	if (head == null)
+	      return;
+	    else {
+	      reversePrint(head.getData());
+	      System.out.println(l.value);
+	    };
 }
 
 public static void main(String[] args) {
@@ -87,12 +96,12 @@ public static void main(String[] args) {
 	list.addElement(d);
 //	list.printLinkedListHead();
 	
-//	list.getElement(1);
+//	list.getElement(2);
 	
-	list.deleteElement(2);
+//	list.deleteElement(1);
 	
 	list.printLinkedListHead();
-	
+	list.printLinkedListTail();
 }
 	
 
