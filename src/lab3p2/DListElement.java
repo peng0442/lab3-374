@@ -1,7 +1,6 @@
 package lab3p2;
 
 
-
 public class DListElement {
 	private DListElement prev;
 	private DListElement next;
