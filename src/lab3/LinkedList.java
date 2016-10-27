@@ -70,7 +70,7 @@ public void printLinkedListHead()
 }
 
 public static void main(String[] args) {
-	// TODO Auto-generated method stub
+	
 	
 	LinkedList list = new LinkedList();
 	ListElement a = new ListElement(1);
@@ -85,9 +85,9 @@ public static void main(String[] args) {
 	
 	//list.getElement(1);
 	
-	//list.deleteElement(1);
+	list.deleteElement(1);
 	
-	//list.printLinkedListHead();
+	list.printLinkedListHead();
 }
 	
 
