@@ -74,11 +74,21 @@ public void printLinkedListHead()
 }
 public void printLinkedListTail()
 {
-	if (head == null)
-	      return;
-	 head.print();
-	 printLinkedListTail();
-	   
+	ListElement current,prev,next;
+	current = head;
+	prev=null;
+	while(current!=null)
+	{
+		next = current.getNext();
+		current.setNext(prev);
+		prev = current;
+		current = next;
+	}
+	head = prev;
+	while(head!=null){
+		head.print();
+		head=head.getNext();
+	}  
 }
 
 public static void main(String[] args) {
@@ -99,8 +109,8 @@ public static void main(String[] args) {
 	
 //	list.deleteElement(1);
 	
-	list.printLinkedListHead();
-//	list.printLinkedListTail();
+//	list.printLinkedListHead();
+	list.printLinkedListTail();
 }
 	
 
