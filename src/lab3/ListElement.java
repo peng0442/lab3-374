@@ -12,31 +12,26 @@ public class ListElement {
 		this.previous = null;
 	}
 	
+	
+	
+	public void setData(int data){
+		this.data = data;
+	}
+	
+	public int getData(){
+		return this.data;
+	}
+	
 	public void setNext(ListElement next){
 		this.next = next;
 	}
 	
 	public ListElement getNext(){
-		return next;
+		return this.next;
 	}
 	
-	public void setData(int data1){
-		data = data1;
-	}
 	
-	public int getData(){
-		return data;
-	}
-	
-	public void setPrevious(ListElement previous){
-		this.previous = previous;
-	}
-	
-	public ListElement getPrevious(){
-		return previous;
-	}
-	
-	public void display(){
+	public void print(){
 		System.out.println(this.data);
 	}
 }
