@@ -2,14 +2,14 @@ package lab3;
 
 public class ListElement {
 	private ListElement next;
-	private ListElement previous;
+	
 	private int data;
 	
 	
-	public ListElement(){
-		this.data = 0;
+	public ListElement(int data){
+		this.data = data;
 		this.next = null;
-		this.previous = null;
+		
 	}
 	
 	
