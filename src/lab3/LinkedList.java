@@ -11,14 +11,18 @@ public class LinkedList
 			head = le;
 		}
 		
-		ListElement current = head;
-		if (current!=null)
-		{
+		
+		else{
+			ListElement current =head;
+			
+			
+		
 			while(current.getNext()!=null)
 			{
 				current=current.getNext();
 			}
 			current.setNext(le);
+		
 		}
 	}
 
@@ -46,7 +50,7 @@ public ListElement getElement(int index)
 public ListElement deleteElement(int index)
 {
 	ListElement current = head;
-	if(head!=null)
+	if(current!=null)
 	{
 		for (int i =0;i<index;i++)
 		{
@@ -55,17 +59,17 @@ public ListElement deleteElement(int index)
 			current.setNext(current.getNext().getNext());
 			
 		}
-		head=current;
+
 	}
-		return head;
+		return current;
 }
 
 public void printLinkedListHead()
 {
-	ListElement list=head;
-	while(list!=null){
-		list.print();
-		list=list.getNext();
+	
+	while(head!=null){
+		head.print();
+		head=head.getNext();
 	}
 }
 
@@ -81,14 +85,14 @@ public static void main(String[] args) {
 	list.addElement(b);
 	list.addElement(c);
 	list.addElement(d);
+//	list.printLinkedListHead();
+	
+//	list.getElement(1);
+	
+	list.deleteElement(2);
+	
 	list.printLinkedListHead();
 	
-	list.getElement(1);
-	
-	list.deleteElement(1);
-	
-	list.printLinkedListHead();
-	System.out.println("hello");
 }
 	
 
