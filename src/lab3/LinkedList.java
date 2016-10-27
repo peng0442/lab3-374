@@ -76,10 +76,9 @@ public void printLinkedListTail()
 {
 	if (head == null)
 	      return;
-	    else {
-	      reversePrint(head.getData());
-	      System.out.println(l.value);
-	    };
+	 head.print();
+	 printLinkedListTail();
+	   
 }
 
 public static void main(String[] args) {
@@ -101,7 +100,7 @@ public static void main(String[] args) {
 //	list.deleteElement(1);
 	
 	list.printLinkedListHead();
-	list.printLinkedListTail();
+//	list.printLinkedListTail();
 }
 	
 
