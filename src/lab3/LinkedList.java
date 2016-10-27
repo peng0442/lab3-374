@@ -88,6 +88,7 @@ public static void main(String[] args) {
 	list.deleteElement(1);
 	
 	list.printLinkedListHead();
+	System.out.println("hello");
 }
 	
 
