@@ -83,7 +83,7 @@ public static void main(String[] args) {
 	list.addElement(d);
 	list.printLinkedListHead();
 	
-	//list.getElement(1);
+	list.getElement(1);
 	
 	list.deleteElement(1);
 	
